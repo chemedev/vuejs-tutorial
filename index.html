@@ -12,12 +12,15 @@
   <body>
     <div id="vue-app">
       <h1>Events</h1>
-      <button v-on:click="add()">Add a Year</button>
+      <button v-on:click.once="add()">Add a Year</button>
       <button @click="subtract()">Subtract a Year</button>
       <button @dblclick="add(10)">Add 10 Years</button>
       <button @dblclick="subtract(10)">Subtract 10 Years</button>
       <p>My age is {{age}}</p>
       <div id="canvas" @mousemove="updateXY">{{x}}, {{y}}</div>
+      <a @click.prevent="click" href="http://www.juanchemello.com.ar"
+        >Mechell Dev</a
+      >
     </div>
   </body>
 </html>
