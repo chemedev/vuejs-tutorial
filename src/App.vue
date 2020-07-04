@@ -1,28 +1,25 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld msg="Welcome to Vue.js"/>
     <h1> {{ title }} </h1>
-    <p> {{ greeting() }}</p>
+    <Ninjas/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue';
+import Ninjas from './components/Ninjas.vue';
 
 export default {
   components: {
     HelloWorld,
+    Ninjas,
   },
   data() {
     return {
-      title: 'Your first Vue file, wooo!',
+      title: 'Mechell App',
     };
-  },
-  methods: {
-    greeting() {
-      return 'heeeeeeeey cowboy!';
-    },
   },
 };
 </script>
