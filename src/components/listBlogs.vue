@@ -21,7 +21,7 @@ export default {
   methods: {},
   created() {
     this.$http
-      .get('https://jsonplaceholder.typicode.com/posts')
+      .get('https://mechell-blog.firebaseio.com/posts.json')
       .then((data) => {
         this.blogs = data.body.slice(0, 10);
       });

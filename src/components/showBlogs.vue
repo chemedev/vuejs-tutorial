@@ -6,7 +6,7 @@
       <router-link :to="`/blog/${blog.id}`">
         <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
       </router-link>
-      <article>{{ blog.body | snippet }}</article>
+      <article>{{ blog.content | snippet }}</article>
     </div>
   </div>
 </template>
@@ -24,9 +24,16 @@ export default {
   methods: {},
   created() {
     this.$http
-      .get('https://jsonplaceholder.typicode.com/posts')
+      .get('https://mechell-blog.firebaseio.com/posts.json')
+      .then((res) => res.json())
       .then((data) => {
-        this.blogs = data.body.slice(0, 10);
+        const blogsArray = [];
+        Object.keys(data).forEach((key) => {
+          // eslint-disable-next-line no-param-reassign
+          data[key].id = key;
+          blogsArray.push(data[key]);
+        });
+        this.blogs = blogsArray;
       });
   },
   computed: {},
