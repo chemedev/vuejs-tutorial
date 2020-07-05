@@ -11,6 +11,7 @@
 </template>
 
 <script>
+/* eslint-disable no-alert */
 export default {
   props: {
     ninjas: {
@@ -28,6 +29,25 @@ export default {
     deleteNinja() {
       this.ninjas.pop();
     },
+  },
+  // Lifecycle Hooks
+  beforeCreate() {
+    alert('beforeCreate');
+  },
+  created() {
+    alert('created');
+  },
+  beforeMount() {
+    alert('beforeMount');
+  },
+  mounted() {
+    alert('mounted');
+  },
+  beforeUpdate() {
+    alert('beforeUpdate');
+  },
+  updated() {
+    alert('updated');
   },
 };
 </script>
