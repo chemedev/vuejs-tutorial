@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header :title="title" @changeTitle="updateTitle($event)" />
+    <app-header :propTitle="title" />
     <app-ninjas :ninjas="ninjas" />
-    <app-footer :title="title" />
+    <app-footer :propTitle="title" />
   </div>
 </template>
 
@@ -30,11 +30,7 @@ export default {
       title: 'Vue Ninjas',
     };
   },
-  methods: {
-    updateTitle(eventProp) {
-      this.title = eventProp;
-    },
-  },
+  methods: {},
 };
 </script>
 
