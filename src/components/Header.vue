@@ -1,11 +1,24 @@
 <template>
-  <header>{{ title }}</header>
+  <header>
+    <h1 @click="changeTitle">{{ title }}</h1>
+  </header>
 </template>
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
-    return { title: 'Vue Ninjas' };
+    return {};
+  },
+  methods: {
+    changeTitle() {
+      this.title = 'Vue Wizards';
+    },
   },
 };
 </script>
@@ -18,5 +31,5 @@ header {
 h1 {
   color: #222;
   text-align: center;
-};
+}
 </style>

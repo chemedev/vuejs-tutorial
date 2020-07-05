@@ -1,8 +1,8 @@
 <template>
   <div>
-    <app-header />
+    <app-header :title="title" />
     <app-ninjas :ninjas="ninjas" />
-    <app-footer />
+    <app-footer :title="title" />
   </div>
 </template>
 
@@ -27,6 +27,7 @@ export default {
         { name: 'Kami', speciality: 'Webpack', show: false },
         { name: 'Yoshi', speciality: 'Data Diggin', show: false },
       ],
+      title: 'Vue Ninjas',
     };
   },
 };
