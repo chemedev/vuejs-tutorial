@@ -2,8 +2,10 @@
   <div v-theme:column="'narrow'" id="show-blogs">
     <h1>All Blog Articles</h1>
     <input type="text" v-model="search" placeholder="search blogs" />
-    <div v-for="(blog, i) in filteredBlogs" :key="i" class="single-blog">
-      <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
+    <div v-for="blog in filteredBlogs" :key="blog.id" class="single-blog">
+      <router-link :to="`/blog/${blog.id}`">
+        <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
+      </router-link>
       <article>{{ blog.body | snippet }}</article>
     </div>
   </div>
@@ -58,5 +60,14 @@ export default {
   margin: 20px 0;
   box-sizing: border-box;
   background-color: #eee;
+}
+#show-blogs a {
+  color: #444;
+  text-decoration: none;
+}
+input[type='text'] {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 </style>
