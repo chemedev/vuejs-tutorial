@@ -8,12 +8,6 @@ import App from './App.vue';
 Vue.use(VueResource);
 
 // Custom directives
-Vue.directive('rainbow', {
-  bind(el, binding, vnode) {
-    el.style.color = `#${Math.random().toString().slice(2, 8)}`;
-  },
-});
-
 Vue.directive('theme', {
   bind(el, binding, vnode) {
     binding.value === 'wide'
@@ -25,10 +19,6 @@ Vue.directive('theme', {
     }
   },
 });
-
-// Filters
-Vue.filter('to-uppercase', (value) => value.toUpperCase());
-Vue.filter('snippet', (value) => `${value.slice(0, 100)}...`);
 
 Vue.config.productionTip = false;
 
