@@ -3,9 +3,16 @@
 /* eslint-disable no-unused-vars */
 import Vue from 'vue';
 import VueResource from 'vue-resource';
+import VueRouter from 'vue-router';
+import Routes from './routes';
 import App from './App.vue';
 
 Vue.use(VueResource);
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes: Routes,
+});
 
 // Custom directives
 Vue.directive('theme', {
@@ -27,4 +34,5 @@ export const bus = new Vue();
 
 new Vue({
   render: (h) => h(App),
+  router,
 }).$mount('#app');

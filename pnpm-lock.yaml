@@ -2,6 +2,7 @@ dependencies:
   core-js: 3.6.5
   vue: 2.6.11
   vue-resource: 1.5.1
+  vue-router: 3.3.4
   vuejs-tutorial: 'link:'
 devDependencies:
   '@vue/cli-plugin-babel': 4.4.6_@vue+cli-service@4.4.6
@@ -8788,6 +8789,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-o6V4wNgeqP+9v9b2bPXrr20CGNQPEXjpbUWdZWq9GJhqVeAGcYoeTtn/D4q059ZiyN0DIrDv/ADrQUmlUQcsmg==
+  /vue-router/3.3.4:
+    dev: false
+    resolution:
+      integrity: sha512-SdKRBeoXUjaZ9R/8AyxsdTqkOfMcI5tWxPZOUX5Ie1BTL5rPSZ0O++pbiZCeYeythiZIdLEfkDiQPKIaWk5hDg==
   /vue-style-loader/4.1.2:
     dependencies:
       hash-sum: 1.0.2
@@ -9184,5 +9189,6 @@ specifiers:
   eslint-plugin-vue: ^6.2.2
   vue: ^2.6.11
   vue-resource: ^1.5.1
+  vue-router: ^3.3.4
   vue-template-compiler: ^2.6.11
   vuejs-tutorial: 'link:'
