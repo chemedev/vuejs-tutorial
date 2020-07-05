@@ -26,6 +26,10 @@ Vue.directive('theme', {
   },
 });
 
+// Filters
+Vue.filter('to-uppercase', (value) => value.toUpperCase());
+Vue.filter('snippet', (value) => `${value.slice(0, 100)}...`);
+
 Vue.config.productionTip = false;
 
 // eslint-disable-next-line import/prefer-default-export
